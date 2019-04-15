@@ -32,7 +32,14 @@ $f3->route('GET /', function(){
 //define a breakfast route
 $f3->route('GET /breakfast', function(){
 
-   echo"<h1>Breakfast!</h1>";
+  $view= new Template();
+  echo $view->render('views/breakfast.html');
+});
+
+$f3->route('GET /lunch', function(){
+
+    $view= new Template();
+    echo $view->render('views/lunch.html');
 });
 
 
