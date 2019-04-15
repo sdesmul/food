@@ -36,10 +36,26 @@ $f3->route('GET /breakfast', function(){
   echo $view->render('views/breakfast.html');
 });
 
+//define a continential breakfast
+$f3->route('GET /breakfast/continental', function(){
+
+    $view= new Template();
+    echo $view->render('views/bfast-cont.html');
+});
+
+//define a lunch route
 $f3->route('GET /lunch', function(){
 
     $view= new Template();
     echo $view->render('views/lunch.html');
+});
+
+
+//define a continential breakfast
+$f3->route('GET /lunch/brunch/buffet', function(){
+
+    $view= new Template();
+    echo $view->render('views/buffet.html');
 });
 
 
